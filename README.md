@@ -2,7 +2,7 @@
 aplikasi untuk jual-beli laptop. dimana ada customers dan admin yang memiliki fungsi masing masing
 
 ### Kebutuhan:
-- Python 3
+- Python 3++
 - Mongodb
 - library python berupa: pymongo dan pyqt5
 
