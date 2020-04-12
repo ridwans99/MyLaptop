@@ -1,0 +1,7 @@
+Customers = Username: 11111, Password: pass1
+	    Username: 22222, Password: pass2
+            Username: 33333, Password: pass3
+
+Admin = Username: 111, Password: admin111
+ 	Username: 222, Password: admin222
+
