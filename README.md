@@ -21,5 +21,8 @@ Customers:
 - Mencari Laptop yang tersedia
 - Melakukan Transaksi
 
+# Note
+aplikasi ini masih dalam perkembangan, belum sempurna
+
 ### Video Pemakaian Aplikasi
 https://youtu.be/Fl0TgEGhEkQ
