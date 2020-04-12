@@ -1,0 +1,160 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+from Laptop import Laptop
+from ControllerPencarianLaptop import ControlPencarianLaptop
+
+class PencarianLaptop_Window(object):
+    def __init__ (self):
+        self.ControllerPencarianLaptop = ControlPencarianLaptop()
+        self.MainWindow = QtWidgets.QMainWindow()
+        self.setupUi(self.MainWindow)
+        self.MainWindow.show()
+        
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(581, 581)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(250, 100, 113, 20))
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setGeometry(QtCore.QRect(250, 190, 113, 20))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(190, 100, 61, 16))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(210, 220, 31, 16))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(220, 190, 21, 16))
+        self.label_3.setObjectName("label_3")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_3.setGeometry(QtCore.QRect(250, 220, 113, 20))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_4.setGeometry(QtCore.QRect(250, 130, 113, 20))
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(170, 130, 81, 16))
+        self.label_4.setObjectName("label_4")
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setGeometry(QtCore.QRect(10, 310, 421, 192))
+        self.textBrowser.setObjectName("textBrowser")
+        self.verticalScrollBar = QtWidgets.QScrollBar(self.centralwidget)
+        self.verticalScrollBar.setGeometry(QtCore.QRect(430, 310, 16, 191))
+        self.verticalScrollBar.setOrientation(QtCore.Qt.Vertical)
+        self.verticalScrollBar.setObjectName("verticalScrollBar")
+        self.label_5 = QtWidgets.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(30, 280, 111, 16))
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(230, 60, 121, 51))
+        self.label_6.setText("")
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(self.centralwidget)
+        self.label_7.setGeometry(QtCore.QRect(200, 30, 181, 31))
+        self.label_7.setObjectName("label_7")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(190, 510, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(300, 250, 61, 21))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.lineEdit_5 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_5.setGeometry(QtCore.QRect(250, 160, 113, 20))
+        self.lineEdit_5.setObjectName("lineEdit_5")
+        self.label_8 = QtWidgets.QLabel(self.centralwidget)
+        self.label_8.setGeometry(QtCore.QRect(220, 160, 31, 16))
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(200, 70, 51, 16))
+        self.label_9.setObjectName("label_9")
+        self.lineEdit_6 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_6.setGeometry(QtCore.QRect(250, 70, 113, 20))
+        self.lineEdit_6.setObjectName("lineEdit_6")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 581, 21))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "PencarianLaptop"))
+        self.label.setText(_translate("MainWindow", "Merk Laptop"))
+        self.label_2.setText(_translate("MainWindow", "Harga"))
+        self.label_3.setText(_translate("MainWindow", "HDD"))
+        self.label_4.setText(_translate("MainWindow", "Tahun Keluaran"))
+        self.label_5.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">Hasil Pencarian</span></p></body></html>"))
+        self.label_7.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">Pencarian Laptop</span></p></body></html>"))
+        self.pushButton.setText(_translate("MainWindow", "Pesan"))
+        self.pushButton_2.setText(_translate("MainWindow", "Cari"))
+        self.label_8.setText(_translate("MainWindow", "RAM"))
+        self.label_9.setText(_translate("MainWindow", "Id Laptop"))
+        self.pushButton_2.clicked.connect(lambda: self.pushcariLaptop(MainWindow))
+        self.pushButton.clicked.connect(lambda: self.pushpesanLaptop(MainWindow))
+
+    def pushcariLaptop(self, MainWindow):
+        cariid = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariidLaptop(cariid)
+        carimerk = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariMerkLaptop(carimerk)
+        caritahun = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariTahunKeluaran(caritahun)
+        cariram = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariRAM(cariram)
+        carihdd = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariHDD(carihdd)
+        cariharga = self.lineEdit.text()
+        laptop = self.ControllerPencarianLaptop.cariHarga(cariharga)
+        if laptop == None:
+            self.ErrorSearch()
+        else:
+            Merk = laptop['Merk Laptop']
+            Tahun = laptop['Tahun Keluaran']
+            Ram = laptop['RAM']
+            Hdd = laptop['HDD']
+            Hrg = laptop['Harga']
+            merklaptop = 'Merk Laptop: ' + str(Merk)
+            tahunkeluaran = 'Tahun Keluaran: ' + str(Tahun)
+            ram = 'RAM: ' + str(Ram)
+            hdd = 'HDD: ' + str(Hdd)
+            harga = 'Harga: ' + str(Hrg)
+            self.textBrowser.append(merklaptop)
+            self.textBrowser.append(tahunkeluaran)
+            self.textBrowser.append(ram)
+            self.textBrowser.append(hdd)
+            self.textBrowser.append(harga)
+            
+    def pesanLaptop(self, MainWindow):
+        Merk = self.lineEdit.text()
+        self.pesanLaptop = self.ControllerPencarianLaptop.pesanLaptop(Merk)
+        self.SuccessPopup()
+        
+    def ErrorSearch(self):
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Pencarian Error")
+        msg.setIcon(QtWidgets.QMessageBox.Critical)
+        msg.setText("Merk tidak ada")
+        msg.exec_()
+
+    def SuccessPopup(self):
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Berhasil")
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        msg.setText("Pemesanan laptop berhasil")
+        msg.exec_()  
+
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    ui = PencarianLaptop_Window()
+    sys.exit(app.exec_())
